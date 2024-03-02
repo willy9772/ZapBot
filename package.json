@@ -1,0 +1,21 @@
+{
+  "dependencies": {
+    "dotenv": "^16.4.5",
+    "gemini-ai": "^1.1.0",
+    "typescript": "^5.3.3",
+    "whatsapp-web.js": "^1.23.0"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.0",
+    "ts-node": "^10.9.2"
+  },
+  "name": "zapbot",
+  "version": "1.0.0",
+  "description": "A GEMINI IA With a fully Whatsapp Integration",
+  "main": "App.js",
+  "scripts": {
+    "test": "node App.js"
+  },
+  "author": "William Gerhard",
+  "license": "ISC"
+}
