@@ -41,6 +41,8 @@ IA.on("message", async (message: Message) => {
 
     const chat = await message.getChat();
 
+    console.log(`Message from ${chat.id._serialized} - ${message.body}`);
+
     if (contexts[chat.id._serialized]) {
         const context = contexts[chat.id._serialized];
         context.messages_received.push(message);
@@ -63,6 +65,8 @@ IA.on("message_create", async (message: Message) => {
     if (!message.fromMe) return;
 
     const chat = await message.getChat();
+
+    console.log(`Message to ${chat.id._serialized} - ${message.body}`);
 
     if (contexts[chat.id._serialized]) {
         const context = contexts[chat.id._serialized];

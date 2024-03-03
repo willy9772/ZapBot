@@ -1,5 +1,5 @@
 {
     "watch": ["src"],
     "ext": "ts",
-    "exec": "ts-node --ignore-warnings App.ts"
+    "exec": "ts-node App.ts"
 }

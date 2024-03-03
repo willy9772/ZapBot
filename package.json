@@ -17,7 +17,7 @@
   "description": "A GEMINI IA With a fully Whatsapp Integration",
   "main": "App.js",
   "scripts": {
-    "start": "node App.js",
+    "start": "tsc && npx pm2 start build/App.js --name zapbot --no-daemon",
     "dev": "nodemon",
     "config": "npx ts-node Config.ts"
   },

@@ -17,6 +17,8 @@ export class Whatsapp {
         return new Promise(async (resolve, reject) => {
             try {
 
+                console.log('Loading Whatsapp...');
+
                 this.client.on("qr", (qr) => {
                     qrcode.generate(qr, { small: true });
                 });
