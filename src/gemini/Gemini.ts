@@ -13,6 +13,10 @@ export default class Gemini {
         this.key = Key;
         this.template = Template;
 
+        if (!this.key) {
+            throw 'The key is required to use Gemini, generate free on https://aistudio.google.com/app/apikey';
+        }
+
         this.gemini = new GoogleGenerativeAI(this.key);
         this.model = this.gemini.getGenerativeModel({ model: 'gemini-pro' });
 
