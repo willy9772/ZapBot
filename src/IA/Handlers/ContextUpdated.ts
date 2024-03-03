@@ -29,7 +29,7 @@ export default function () {
 
         for (const response of responses) {
             await sleep(calcTypingTime(response.length));
-            await newContext.chat.sendMessage(response);
+            await newContext.chat.sendMessage(response.trim());
         }
 
     })
