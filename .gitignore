@@ -1,3 +1,4 @@
-nodemon.json
 node_modules
-.env
+config.json
+.cache
+.wwebjs_cache
