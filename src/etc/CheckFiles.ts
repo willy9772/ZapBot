@@ -7,6 +7,9 @@ export default function () {
         throw 'config.json is missing, run `npm run config` to create it';
     }
 
+    // @ts-ignore
+    global.cacheDir = path.join(__dirname, '../../.cache');
+
     if (!fs.existsSync(path.join(__dirname, '../../.cache'))) {
         fs.mkdirSync(path.join(__dirname, '../../.cache'));
     }
