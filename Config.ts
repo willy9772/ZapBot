@@ -35,7 +35,7 @@ const Config = {
     blacklist: ['*'],
     allowGroups: false,
     timeoutForReply: 15,
-    typingTime: 0.1,
+    typingTime: 0.05,
 };
 
 (async () => {
