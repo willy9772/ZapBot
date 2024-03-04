@@ -31,15 +31,11 @@ const rl = readline.createInterface({
 });
 
 const Config = {
-    whitelist: [
-        "555180282898@c.us",
-        "555199180715@c.us"
-    ],
-    blacklist: [
-        '*'
-    ],
+    whitelist: ['*'],
+    blacklist: ['*'],
     allowGroups: false,
     timeoutForReply: 15,
+    typingTime: 0.1,
 };
 
 (async () => {

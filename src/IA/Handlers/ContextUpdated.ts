@@ -25,11 +25,15 @@ export default function () {
 
         const responses: string[] = await IA.prompt(prompt);
 
-        await newContext.chat.sendStateTyping();
+        console.log(`\nRespostas geradas para ${chatId}:\n${responses}\n`)
 
         for (const response of responses) {
+
+            await newContext.chat.sendStateTyping();
+
             await sleep(calcTypingTime(response.length));
             await newContext.chat.sendMessage(response.trim());
+
         }
 
     })
@@ -54,6 +58,5 @@ function gerarPrompt(messages_received: Message[], messages_sent: Message[]) {
 }
 
 function calcTypingTime(length: number) {
-    // 1 Letra = 0.3 segundos
-    return length * 0.3;
+    return length * config.typingTime;
 }
