@@ -50,7 +50,7 @@ function gerarPrompt(messages_received: Message[], messages_sent: Message[]) {
     let prompt = '';
 
     for (const message of mensagensPorOrdem) {
-        prompt += `${message.fromMe ? 'Eu: ' : 'Você: '} ${message.body}\n`;
+        prompt += `${message.fromMe ? 'Eu: ' : 'Pessoa: '} ${message.body}\n`;
     }
 
     return prompt;

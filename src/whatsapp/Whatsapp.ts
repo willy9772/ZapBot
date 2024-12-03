@@ -10,7 +10,12 @@ export class Whatsapp {
                 // @ts-ignore
                 dataPath: global.cacheDir + '/Whatsapp',
             }),
-        });;
+            webVersion: "2.3000.1018290951-alpha",
+            webVersionCache: {
+                type: "remote",
+                remotePath: "https://raw.githubusercontent.com/wppconnect-team/wa-version/refs/heads/main/html/2.3000.1018290951-alpha.html"
+            }
+        });
     }
 
     public async start(): Promise<Client> {
